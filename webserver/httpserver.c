@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
 	if (bind(serv_sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) == -1)
 		error_handling_and_exit("bind() error");
 
-	fputs("\n 브라우저를 실행 후 주소창에 localhost:9000번을 입력하세요! \n", stdout);
+	fputs("\n Open Your Web Browser. type localhost:9000 in address window \n", stdout);
 
 	if (listen(serv_sock, QUEUE_SIZE) == -1)
 		error_handling_and_exit("listen() error");
